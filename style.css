@@ -104,3 +104,38 @@ h1 {
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
 }
+/* Container voor tekst en foto */
+.about-content {
+    display: flex;
+    align-items: center; /* Zorgt dat tekst en foto verticaal mooi uitlijnen */
+    gap: 40px; /* Ruimte tussen de tekst en de foto */
+    margin-top: 20px;
+}
+
+/* De tekst krijgt de meeste ruimte */
+.about-text {
+    flex: 2;
+}
+
+/* De foto container */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 250px; /* Je kunt dit getal veranderen voor de grootte */
+    height: auto;
+    border-radius: 15px; /* Maakt de hoekjes rond, gebruik 50% voor een cirkel */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Zorg dat het op mobiel onder elkaar komt te staan */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse; /* Foto boven, tekst onder op mobiel */
+        text-align: center;
+    }
+}
