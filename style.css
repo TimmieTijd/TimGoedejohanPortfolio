@@ -54,3 +54,44 @@ header {
 h1 {
     color: #2c3e50;
 }
+/* De container voor alle projecten */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dit maakt precies twee gelijke kolommen */
+    gap: 20px; /* Ruimte tussen de projecten */
+    margin-top: 20px;
+}
+
+/* De kaartjes zelf */
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Zorgt dat de afbeelding niet buiten de bocht vliegt */
+    display: flex;
+    flex-direction: column;
+}
+
+/* De afbeeldingen binnen de kaartjes */
+.project-img {
+    width: 100%;
+    height: 200px; /* Vaste hoogte voor uniformiteit */
+    object-fit: cover; /* Zorgt dat de foto mooi schaalt zonder te vervormen */
+}
+
+/* De tekst onder de afbeelding */
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Mobiele weergave: onder elkaar op kleine schermen */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
