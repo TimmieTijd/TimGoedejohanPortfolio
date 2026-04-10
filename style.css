@@ -211,3 +211,48 @@ h1 {
     font-size: 0.9rem;
     color: #666;
 }
+/* Het grid voor 3 kolommen */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Precies drie gelijke kolommen */
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* De individuele skill kaartjes */
+.skill-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: het kaartje komt een beetje omhoog */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* De icoontjes uniform maken */
+.skill-card img {
+    width: 60px; /* Pas de grootte aan naar wens */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    margin: 0;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Zorg dat het op mobiel naar 1 of 2 kolommen gaat */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 naast elkaar op kleine schermen */
+    }
+}
